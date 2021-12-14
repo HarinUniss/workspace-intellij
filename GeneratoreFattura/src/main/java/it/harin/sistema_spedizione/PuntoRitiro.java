@@ -21,6 +21,6 @@ public class PuntoRitiro implements Spedizione{
 
     @Override
     public String getInfo() {
-        return "Consegna nel punto ritiro numero" + numeroPuntoRitiro +" "+ getPrezzo() +"€";
+        return "Consegna nel punto ritiro numero " + numeroPuntoRitiro +" costo "+ getPrezzo() +"€";
     }
 }

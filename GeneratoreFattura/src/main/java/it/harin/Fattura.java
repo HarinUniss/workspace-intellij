@@ -58,7 +58,7 @@ public class Fattura {
             writer.scriviLinea("");
         }
         writer.scriviLinea("");
-        writer.scriviLinea("Spedizione " + tipoSpedizione.getInfo() );
+        writer.scriviLinea("Spedizione : " + tipoSpedizione.getInfo() );
         writer.scriviLinea("Totale : " + this.getTotale());
         writer.scriviLinea("");
         writer.stop();

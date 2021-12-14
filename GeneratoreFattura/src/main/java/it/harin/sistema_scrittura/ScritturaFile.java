@@ -14,10 +14,16 @@ public class ScritturaFile implements Writer{
         this.nomeFile = nomeFile;
     }
 
+    public ScritturaFile() {
+        //non genera il file
+    }
+
+
     @Override
     public void start() {
-        percorso = Paths.get(nomeFile);
-        contenuto = "";
+        System.out.println("Scrittura fattura : " + nomeFile + ".estensione" );
+        percorso = Paths.get(nomeFile + ".estensione"); //creo percorso file e file
+        contenuto = ""; //contenuto vuoto
     }
 
     @Override

@@ -52,18 +52,19 @@ public class BillServlet extends HttpServlet {
                     "<b>" + i + " - " + product.getName() + "</b> : " + product.getPrice() + "<br/>" +
                             product.getDescription() + "<br/><br/>");
         }
-        String form = "<form action=\"bill\">" +
-                "<b>nom complet :</b> <input name=\"fullname\"/><br/>" +    //da notare i nomi dei parametri "fullname"
-                "<b>adresse :</b> <input name=\"address\"/><br/><br/>" +    // "address"
-                "<b>livraison :</b> <br/>" +
-                "à domicile : <input type=\"radio\" name=\"deliveryMode\" value=\"direct\"/><br/>" + //"deliveryMode" che ha vari valori
-                "express : <input type=\"radio\" name=\"deliveryMode\" value=\"express\"/><br/>" +
-                "point relais : <input type=\"radio\" name=\"deliveryMode\" value=\"relay\"/><br/>" +
-                "à retirer : <input type=\"radio\" name=\"deliveryMode\" value=\"takeAway\"/><br/>" +
-                "<b>Informations livraison</b> (relay et express) : <input name=\"deliveryInfo\"/><br/><br/>" + // "deliveryInfo"
-                "<b>liste produits </b> (produit:quantité, un produit par ligne) : <br/>" +
-                "<textarea name=\"products\"></textarea><br/>" +    // "products"
-                "<input type=\"submit\"/>" +    //bottone
+        String form =
+                "<form action=\"bill\">" +
+                        "<b>nom complet :</b> <input name=\"fullname\"/><br/>" +    //da notare i nomi dei parametri "fullname"
+                        "<b>adresse :</b> <input name=\"address\"/><br/><br/>" +    // "address"
+                        "<b>livraison :</b> <br/>" +
+                        "à domicile : <input type=\"radio\" name=\"deliveryMode\" value=\"direct\"/><br/>" + //"deliveryMode" che ha vari valori
+                        "express : <input type=\"radio\" name=\"deliveryMode\" value=\"express\"/><br/>" +
+                        "point relais : <input type=\"radio\" name=\"deliveryMode\" value=\"relay\"/><br/>" +
+                        "à retirer : <input type=\"radio\" name=\"deliveryMode\" value=\"takeAway\"/><br/>" +
+                        "<b>Informations livraison</b> (relay et express) : <input name=\"deliveryInfo\"/><br/><br/>" + // "deliveryInfo"
+                        "<b>liste produits </b> (produit:quantité, un produit par ligne) : <br/>" +
+                        "<textarea name=\"products\"></textarea><br/>" +    // "products"
+                        "<input type=\"submit\"/>" +    //bottone
                 "</form>";
         resp.getWriter().println(form);
     }
